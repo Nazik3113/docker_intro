@@ -1,0 +1,2 @@
+# should run inside of nginx_container directory
+docker run --name nginx_test -v ${PWD}:/usr/share/nginx/html -p 8080:80 --rm nginx

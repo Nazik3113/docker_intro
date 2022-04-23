@@ -1,0 +1,63 @@
+# get docker version
+docker version
+
+# show all the containers
+docker ps -a
+
+# get docker images
+docker images
+
+# pull the image
+docker pull hello-world
+
+# run docker container 
+docker run hello-world
+
+# remove(delete) container
+docker rm :container_id_or_name
+
+# -i mean interactive. 
+# -t mean terminal. 
+# can be written as -it
+# busybox - linux
+docker run -i -t busybox
+
+# stop container
+docker stop :container_id_or_name
+
+# remove(delete) all stoped containers
+docker container prune
+
+# run container in background(detached)
+# -d means detached
+docker run -d :image_name
+
+# container details
+docker inspect :container_id_or_name 
+
+# run process in existing container 
+# -it mean interactive terminal 
+# bash mean name of the process
+docker exec -it :container_id_or_name bash
+
+# set name to container
+docker run --name :name :image_name
+
+# port mapping(publish)
+# -p mean publish
+docker run -p port_on_your_mashine:container_port :image_name
+
+# volumes
+# -v meand volume
+docker run -v local_dir_path:dir_path_inside_of_container :image_name
+
+# auto remove stoped container
+docker run --rm :image_name
+
+# split command by lines with "\" delimeter
+docker run \
+    --name nginx_test \
+    -v ${PWD}:/usr/share/nginx/html \
+    -p 8080:80 \
+    --rm \
+    nginx
