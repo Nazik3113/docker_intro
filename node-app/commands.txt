@@ -1,0 +1,7 @@
+# create image from Dockerfile
+# . - path to Dockerfile's dir
+# -f - filename(Dockerfile by default)
+# -t - tag "1.1.1" is optional(by default "latest")
+docker build . \
+    -f Dockerfile \
+    -t my_nodejs_dockerfile:1.1.1

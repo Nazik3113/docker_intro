@@ -1,0 +1,12 @@
+# python - base container name
+# alpine - container tag
+FROM node:alpine
+
+# create app dir in container(best practice)
+WORKDIR /app
+
+# copy all to WORKDIR
+COPY . .
+
+# run command when container is created(on run)
+CMD ["node", "index.mjs"]
