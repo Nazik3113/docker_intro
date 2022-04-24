@@ -61,3 +61,9 @@ docker run \
     -p 8080:80 \
     --rm \
     nginx
+
+# get all volumes    
+docker volume ls
+
+# inspect volume 
+docker inspect :volume_id_or_name

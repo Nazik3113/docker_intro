@@ -1,0 +1,15 @@
+# run containers
+docker-compose up
+
+# run containers in background
+# -d - detached
+docker-compose up -d
+
+# run and rebuild containers
+docker-compose up --build
+
+# get container logs 
+docker logs :container_id_or_name
+
+# stop all the containers
+docker-compose down
